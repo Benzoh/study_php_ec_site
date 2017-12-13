@@ -110,19 +110,19 @@ endif;
         <br>
         <table>
             <form action="register3.php" method="post">
-                <input type="hidden" name="email1" value="<?php htmlspecialchars($_POST['email1']); ?>">
-                <input type="hidden" name="passwd" value="<?php htmlspecialchars($_POST['passwd']); ?>">
-                <input type="hidden" name="name_kanji" value="<?php htmlspecialchars($_POST['name_kanji']); ?>">
-                <input type="hidden" name="name_kana" value="<?php htmlspecialchars($_POST['name_kana']); ?>">
-                <input type="hidden" name="sex" value="<?php htmlspecialchars($_POST['sex']); ?>">
-                <input type="hidden" name="year" value="<?php htmlspecialchars($_POST['year']); ?>">
-                <input type="hidden" name="month" value="<?php htmlspecialchars($_POST['month']); ?>">
-                <input type="hidden" name="day" value="<?php htmlspecialchars($_POST['day']); ?>">
-                <input type="hidden" name="postal1" value="<?php htmlspecialchars($_POST['postal1']); ?>">
-                <input type="hidden" name="postal2" value="<?php htmlspecialchars($_POST['postal2']); ?>">
-                <input type="hidden" name="xmpf" value="<?php htmlspecialchars($_POST['xmpf']); ?>">
-                <input type="hidden" name="address1" value="<?php htmlspecialchars($_POST['address1']); ?>">
-                <input type="hidden" name="address2" value="<?php htmlspecialchars($_POST['address2']); ?>">
+                <input type="hidden" name="email1" value="<?php echo htmlspecialchars($_POST['email1']); ?>">
+                <input type="hidden" name="passwd" value="<?php echo htmlspecialchars($_POST['passwd']); ?>">
+                <input type="hidden" name="name_kanji" value="<?php echo htmlspecialchars($_POST['name_kanji']); ?>">
+                <input type="hidden" name="name_kana" value="<?php echo htmlspecialchars($_POST['name_kana']); ?>">
+                <input type="hidden" name="sex" value="<?php echo htmlspecialchars($_POST['sex']); ?>">
+                <input type="hidden" name="year" value="<?php echo htmlspecialchars($_POST['year']); ?>">
+                <input type="hidden" name="month" value="<?php echo htmlspecialchars($_POST['month']); ?>">
+                <input type="hidden" name="day" value="<?php echo htmlspecialchars($_POST['day']); ?>">
+                <input type="hidden" name="postal1" value="<?php echo htmlspecialchars($_POST['postal1']); ?>">
+                <input type="hidden" name="postal2" value="<?php echo htmlspecialchars($_POST['postal2']); ?>">
+                <input type="hidden" name="xmpf" value="<?php echo htmlspecialchars($_POST['xmpf']); ?>">
+                <input type="hidden" name="address1" value="<?php echo htmlspecialchars($_POST['address1']); ?>">
+                <input type="hidden" name="address2" value="<?php echo htmlspecialchars($_POST['address2']); ?>">
                 <tr>
                     <td align="right">メールアドレス</td>
                     <td><?php echo $_POST['email1']; ?></td>
