@@ -4,6 +4,12 @@ require('config.php');
 
 // var_dump($db_host);
 
+function db_connect() {
+    global $db_host, $db_user, $db_password, $db_name;
+    $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+    return $link;
+}
+
 function auth() {
     global $magic_code;
 
@@ -20,9 +26,11 @@ function make_category($parent_id, $order, $sort, $value, $indent) {
     // var_dump($parent_id, $order, $sort, $value, $indent);
 
     // TODO: これよろしくない気がする
-    global $db_host, $db_user, $db_password, $db_name;
+    // global $db_host, $db_user, $db_password, $db_name;
+    // $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
 
-    $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+    $link = db_connect();
+
     $sql = "select * from category where parent_id = '$parent_id' and category_id >= 0 order by '$order' $sort";
     $result = mysqli_query($link, $sql);
     // var_dump($result);

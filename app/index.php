@@ -11,6 +11,10 @@ $result = mysqli_query($link, 'set character set utf8');
 
 require('header.php');
 require('topbar.php');
+require('suggest_item.php');
 require('footer.php');
+
+
+
 
 
