@@ -1,9 +1,13 @@
 <?php
 
+require('config.php');
+
+// var_dump($db_host);
+
 function auth() {
     global $magic_code;
 
-    if (md5($magic_code . $_SESSION['login_id']) == $_SESSION['auth_code']) {
+    if (isset($_SESSION['login_id']) && md5($magic_code . $_SESSION['login_id']) == $_SESSION['auth_code']) {
         return true;
     } else {
         // setcookie(session_name(), '', 0);
@@ -13,8 +17,15 @@ function auth() {
 }
 
 function make_category($parent_id, $order, $sort, $value, $indent) {
+    // var_dump($parent_id, $order, $sort, $value, $indent);
+
+    // TODO: これよろしくない気がする
+    global $db_host, $db_user, $db_password, $db_name;
+
+    $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
     $sql = "select * from category where parent_id = '$parent_id' and category_id >= 0 order by '$order' $sort";
     $result = mysqli_query($link, $sql);
+    // var_dump($result);
 
     while ($category = mysqli_fetch_array($result)) {
         if ($category['category_id'] == $value) {

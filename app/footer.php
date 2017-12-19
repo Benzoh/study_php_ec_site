@@ -12,7 +12,7 @@
         <a href="about.php"><?php echo $site_name; ?></a> | 
         <a href="term.php">利用規約</a> | 
         <a href="privacy.php">プライバシー規約</a><br>
-        2007 - <?php echo date('Y'); ?> $copy;<?php echo $site_name; ?>
+        2007 - <?php echo date('Y'); ?> ©<?php echo $site_name; ?>
     </div>
 </body>
 </html>

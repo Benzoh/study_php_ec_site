@@ -1,5 +1,5 @@
 <?php
-
+$title = "トップページ";
 ?>
 
 <!DOCTYPE html>

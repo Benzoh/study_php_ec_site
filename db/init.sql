@@ -57,7 +57,18 @@ CREATE TABLE `publisher` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
 
 -- カテゴリー
--- TODO:
+
+CREATE TABLE `category` (
+    `category_id` int(11) NOT NULL auto_increment,
+    `parent_id` int(11) NOT NULL default '0',
+    `type` int(11) NOT NULL default '0',
+    `category_name` varchar(64) NOT NULL default '',
+    `state` int(11) NOT NULL default '0',
+    PRIMARY KEY (`category_id`),
+    KEY `parent_id` (`parent_id`),
+    KEY `type` (`type`),
+    KEY `state` (`state`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
 
 
 -- 会員
